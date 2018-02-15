@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductCategoryRow from './ProductCategoryRow';
 import ProductRow from './ProductRow';
 
-export default class ProductTable extends Component {
+export default class ProductTable extends React.Component {
   render() {
     const filterText = this.props.filterText;
     const inStockOnly = this.props.inStockOnly;
