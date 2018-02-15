@@ -12,9 +12,28 @@ npm start
 ```
 
 ## Hands on
-![Enoncé](https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png)
+
+### Step 0: Start With A Mock
+Imagine that we already have a JSON API and a mock from our designer. The mock looks like this:
+![Mock](https://reactjs.org/static/thinking-in-react-mock-1071fbcc9eed01fddc115b41e193ec11-4dd91.png)
+
+Our JSON API returns some data that looks like this:
+```js
+[
+  {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
+  {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
+  {category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},
+  {category: "Electronics", price: "$99.99", stocked: true, name: "iPod Touch"},
+  {category: "Electronics", price: "$399.99", stocked: false, name: "iPhone 5"},
+  {category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"}
+];
+```
+
 
 ### Step 1: Break The UI Into A Component Hierarchy
+
+![Enoncé](https://reactjs.org/static/thinking-in-react-components-eb8bda25806a89ebdc838813bdfa3601-82965.png)
+
 * **FilterableProductTable (orange)**: contains the entirety of the example
 * **SearchBar (blue)**: receives all user input
 * **ProductTable (green)**: displays and filters the data collection based on user input
