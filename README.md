@@ -154,3 +154,26 @@ Hopefully, this gives you an idea of how to think about building components and 
 While it may be a little more typing than you’re used to, remember that code is read far more than it’s written, 
 and it’s extremely easy to read this modular, explicit code. As you start to build large libraries of components, 
 you’ll appreciate this explicitness and modularity, and with code reuse, your lines of code will start to shrink. :)
+
+## For the braves
+### Write a ProductAPI
+1. Write a `ProductAPI` that simulate a api call to get products by returning a promise.
+2. Test it using [jest](https://facebook.github.io/jest/) (just write a file `ProductAPI.test.js` and run `npm test`).
+3. Use it in your application.
+
+### Test your application
+Write tests for your components using [jest](https://facebook.github.io/jest/) and [enzyme](https://github.com/airbnb/enzyme)
+
+#### Setup
+```
+npm i --save-dev enzyme enzyme-adapter-react-16
+```
+
+Then create a file `src/setupTests.js` with this content:
+```js
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
+```
+You're ready to go !
