@@ -6,3 +6,7 @@ body {
   width: 800px;
   margin: 30px auto;
 }
+
+.unStocked {
+  color: red;
+}
