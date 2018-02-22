@@ -7,7 +7,7 @@ export default class FilterableProductTable extends Component {
 
   constructor() {
     super();
-    this.state = { filterText: 'ball', inStockOnly: true };
+    this.state = { filterText: '', inStockOnly: false };
   }
 
   render() {
@@ -15,7 +15,9 @@ export default class FilterableProductTable extends Component {
       <div>
         <SearchBar
           filterText={this.state.filterText}
-          inStockOnly={this.state.inStockOnly}/>
+          inStockOnly={this.state.inStockOnly}
+          onChangeCallBack={(newState) => this.setState(newState)}
+        />
         <ProductTable
           products={this.props.products}
           filterText={this.state.filterText}
