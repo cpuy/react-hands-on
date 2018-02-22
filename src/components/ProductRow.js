@@ -5,8 +5,8 @@ export default class ProductRow extends Component {
     let product = this.props.product;
     return (
       <div>
-        <div style={product.stocked ? { color: "red" } : {}}>{product.name}</div>
-        <div>{product.price}</div>
+        <div className="ProductRow-name" style={product.stocked ? { color: "red" } : {}}>{product.name}</div>
+        <div className="ProductRow-price">{product.price}</div>
       </div>
     );
   }
