@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
+import ProductTable from "./ProductTable";
+import SearchBar from "./SearchBar";
 
 export default class FilterableProductTable extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            filterText: '',
+            inStockOnly: false
+        };
+    }
   render() {
+
+
     return (
       <div>
-        <h1>Nothing is implemented there :-(</h1>
-        <p>Take Your Hands Out of Your Pockets!</p>
+        <SearchBar
+            filterText={this.state.filterText}
+            inStockOnly={this.state.inStockOnly}
+        />
+        <ProductTable
+            products={this.props.products}
+            filterText={this.state.filterText}
+            inStockOnly={this.state.inStockOnly}
+        />
       </div>
     );
   }
