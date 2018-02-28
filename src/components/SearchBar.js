@@ -4,15 +4,20 @@ export default class SearchBar extends Component {
     render() {
         const filterText=this.props.filterText;
         const inStockOnly=this.props.inStockOnly;
+        const onSearch=this.props.onSearch;
+        const onCheck=this.props.onCheck;
 
         return (
             <form>
                 <input
                     type="text"
                     placeholder="Search..."
-                    value={filterText}/>
+                    value={filterText}
+                    onChange={onSearch}
+                />
                 <p>
-                    <input type="checkbox" checked={inStockOnly}/>
+
+                    <input onChange={onCheck} type="checkbox" checked={inStockOnly}/>
                     {' '}
                     Only show products in stock
                 </p>

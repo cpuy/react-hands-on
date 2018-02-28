@@ -21,9 +21,9 @@ export default class ProductTable extends Component {
             }
             if (previousCategory !== product.category) {
                 previousCategory = product.category;
-                rows.push(<ProductCategoryRow category={product.category}/>);
+                rows.push(<ProductCategoryRow key={product.category} category={product.category}/>);
             }
-            rows.push(<ProductRow product={product}/>);
+            rows.push(<ProductRow key={product.name} product={product}/>);
         });
 
         return (

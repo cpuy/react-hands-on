@@ -9,6 +9,15 @@ export default class FilterableProductTable extends Component {
             filterText: '',
             inStockOnly: false
         };
+        this.updateSearch = this.updateSearch.bind(this);
+        this.updateInStock = this.updateInStock.bind(this);
+    }
+
+    updateSearch(event){
+        this.setState({filterText: event.target.value})
+    }
+    updateInStock(event){
+        this.setState({inStockOnly: event.target.checked})
     }
   render() {
 
@@ -18,6 +27,8 @@ export default class FilterableProductTable extends Component {
         <SearchBar
             filterText={this.state.filterText}
             inStockOnly={this.state.inStockOnly}
+            onSearch={this.updateSearch}
+            onCheck={this.updateInStock}
         />
         <ProductTable
             products={this.props.products}
